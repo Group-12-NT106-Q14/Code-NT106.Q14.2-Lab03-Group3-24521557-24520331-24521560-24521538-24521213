@@ -1,16 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|d:\\code-nt106.q14.2-lab03-group3-24521557-24520331-24521560-24521538-24521213\\bai01\\bai01dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|solutionrelative:bai01\\bai01dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|d:\\code-nt106.q14.2-lab03-group3-24521557-24520331-24521560-24521538-24521213\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,21 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Bai01Dashboard.cs",
-              "DocumentMoniker": "D:\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai01\\Bai01Dashboard.cs",
-              "RelativeDocumentMoniker": "Bai01\\Bai01Dashboard.cs",
-              "ToolTip": "D:\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai01\\Bai01Dashboard.cs",
-              "RelativeToolTip": "Bai01\\Bai01Dashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T06:49:06.324Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -48,19 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dashboard.cs",
-              "DocumentMoniker": "D:\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Dashboard.cs",
-              "ToolTip": "D:\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Dashboard.cs",
-              "RelativeToolTip": "Dashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAApwAwAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T06:37:49.194Z",
-              "EditorCaption": ""
             }
           ]
         },
