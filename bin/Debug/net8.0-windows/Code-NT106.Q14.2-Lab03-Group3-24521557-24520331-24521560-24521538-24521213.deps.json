@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213/1.0.0": {
+        "runtime": {
+          "Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
