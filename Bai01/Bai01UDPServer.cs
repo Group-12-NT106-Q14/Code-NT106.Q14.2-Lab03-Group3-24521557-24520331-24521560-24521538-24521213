@@ -17,6 +17,26 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
         {
             InitializeComponent();
             txtPort.Text = string.Empty;
+
+            // Thêm dòng báo IP của server khi mở form
+            string ipLan = GetLocalIPv4();
+            AddMessage($"Địa chỉ IP của Server: {ipLan}");
+        }
+
+        // Hàm lấy IPv4 đầu tiên (LAN)
+        public static string GetLocalIPv4()
+        {
+            string localIP = "";
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork && !ip.ToString().StartsWith("169.254"))
+                {
+                    localIP = ip.ToString();
+                    break;
+                }
+            }
+            return localIP;
         }
 
         private void btnListen_Click(object sender, EventArgs e)
@@ -40,7 +60,6 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
                     isListening = true;
                     btnListen.Text = "Stop Listen";
                     AddMessage($"Đang lắng nghe trên port {port}...");
-
                     listenerThread = new Thread(ListenLoop);
                     listenerThread.IsBackground = true;
                     listenerThread.Start();
@@ -52,7 +71,10 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
                     btnListen.Text = "Listen";
                 }
             }
-            else StopListening();
+            else
+            {
+                StopListening();
+            }
         }
 
         private void ListenLoop()
@@ -65,7 +87,6 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
                     byte[] receivedBytes = udpListener.Receive(ref remoteEndPoint);
                     string message = Encoding.UTF8.GetString(receivedBytes);
                     string display = $"{remoteEndPoint.Address}:{remoteEndPoint.Port} - {message}";
-
                     if (lstMessages.InvokeRequired)
                     {
                         lstMessages.Invoke(new Action<string>(AddMessage), display);
@@ -104,10 +125,10 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
             {
                 udpListener?.Close();
             }
-            catch { }  
+            catch { }
             if (listenerThread != null && listenerThread.IsAlive)
             {
-                listenerThread.Join(1000); 
+                listenerThread.Join(1000);
             }
             btnListen.Text = "Listen";
             if (lstMessages.InvokeRequired)

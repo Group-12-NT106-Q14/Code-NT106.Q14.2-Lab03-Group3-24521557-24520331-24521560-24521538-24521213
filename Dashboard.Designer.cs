@@ -76,6 +76,7 @@
             btnBai02.TabIndex = 2;
             btnBai02.Text = "Bài 02";
             btnBai02.UseVisualStyleBackColor = false;
+            btnBai02.Click += btnBai02_Click;
             // 
             // btnBai03
             // 
@@ -89,6 +90,7 @@
             btnBai03.TabIndex = 3;
             btnBai03.Text = "Bài 03";
             btnBai03.UseVisualStyleBackColor = false;
+            btnBai03.Click += btnBai03_Click;
             // 
             // btnBai04
             // 

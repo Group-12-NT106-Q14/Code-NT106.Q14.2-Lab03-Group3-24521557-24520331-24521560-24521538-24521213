@@ -3,11 +3,13 @@
     partial class Bai01UDPServerForm
     {
         private System.ComponentModel.IContainer components = null;
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
+
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
@@ -16,60 +18,57 @@
             this.btnListen = new System.Windows.Forms.Button();
             this.lstMessages = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
+
             // lblTitle
-            // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(100, 15);
+            this.lblTitle.Location = new System.Drawing.Point(170, 18);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(144, 27);
+            this.lblTitle.Size = new System.Drawing.Size(170, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "UDP Server";
-            // 
+
             // lblPort
-            // 
             this.lblPort.AutoSize = true;
-            this.lblPort.Location = new System.Drawing.Point(18, 58);
+            this.lblPort.Font = new System.Drawing.Font("Arial", 11F);
+            this.lblPort.Location = new System.Drawing.Point(27, 64);
             this.lblPort.Name = "lblPort";
-            this.lblPort.Size = new System.Drawing.Size(38, 16);
+            this.lblPort.Size = new System.Drawing.Size(40, 22);
             this.lblPort.TabIndex = 1;
             this.lblPort.Text = "Port:";
-            // 
+
             // txtPort
-            // 
-            this.txtPort.Location = new System.Drawing.Point(62, 55);
+            this.txtPort.Font = new System.Drawing.Font("Arial", 11F);
+            this.txtPort.Location = new System.Drawing.Point(73, 60);
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(90, 22);
+            this.txtPort.Size = new System.Drawing.Size(110, 28);
             this.txtPort.TabIndex = 2;
-            // 
+
             // btnListen
-            // 
             this.btnListen.BackColor = System.Drawing.Color.LightBlue;
-            this.btnListen.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.btnListen.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.btnListen.ForeColor = System.Drawing.Color.White;
-            this.btnListen.Location = new System.Drawing.Point(170, 50);
+            this.btnListen.Location = new System.Drawing.Point(210, 56);
             this.btnListen.Name = "btnListen";
-            this.btnListen.Size = new System.Drawing.Size(126, 32);
+            this.btnListen.Size = new System.Drawing.Size(150, 38);
             this.btnListen.TabIndex = 3;
             this.btnListen.Text = "Listen";
             this.btnListen.UseVisualStyleBackColor = false;
             this.btnListen.Click += new System.EventHandler(this.btnListen_Click);
-            // 
+
             // lstMessages
-            // 
+            this.lstMessages.Font = new System.Drawing.Font("Consolas", 12F);
             this.lstMessages.FormattingEnabled = true;
-            this.lstMessages.ItemHeight = 16;
-            this.lstMessages.Location = new System.Drawing.Point(20, 100);
+            this.lstMessages.ItemHeight = 20;
+            this.lstMessages.Location = new System.Drawing.Point(20, 110);
             this.lstMessages.Name = "lstMessages";
-            this.lstMessages.Size = new System.Drawing.Size(276, 324);
+            this.lstMessages.Size = new System.Drawing.Size(450, 340);
             this.lstMessages.TabIndex = 4;
-            // 
+
             // Bai01UDPServerForm
-            // 
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(320, 450);
+            this.ClientSize = new System.Drawing.Size(490, 470);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblPort);
             this.Controls.Add(this.txtPort);

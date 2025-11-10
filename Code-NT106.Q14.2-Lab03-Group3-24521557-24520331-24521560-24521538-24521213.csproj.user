@@ -10,6 +10,18 @@
     <Compile Update="Bai01\Bai01UDPServer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Bai02\Bai02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai03\Bai03Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai03\Bai03TCPClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai03\Bai03TCPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
