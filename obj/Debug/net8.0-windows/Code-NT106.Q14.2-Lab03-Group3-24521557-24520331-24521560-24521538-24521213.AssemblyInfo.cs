@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dd8522fdd17dc9ae2960e1912d3b3feed8ebded")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d8b6d1d066a60674362e7427e9725973ca7c9bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

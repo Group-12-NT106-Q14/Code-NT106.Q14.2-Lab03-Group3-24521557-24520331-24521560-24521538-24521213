@@ -30,6 +30,7 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
         }
         private void StartListen(object sender, EventArgs e)
         {
+            btnListen.Enabled = false;
             CheckForIllegalCrossThreadCalls = false;
             Thread serverThread = new Thread(new ThreadStart(StartUnsafeThread));
             serverThread.IsBackground = true;
@@ -38,13 +39,13 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
         void StartUnsafeThread()
         {
             int bytesReceived = 0;
-            byte[] recv = new byte[8]; 
+            byte[] recv = new byte[8];
             string ipLan = GetLocalIPv4();
             Socket listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint ipepServer = new IPEndPoint(IPAddress.Parse(ipLan), 8080);
+            IPEndPoint ipepServer = new IPEndPoint(IPAddress.Parse(ipLan), 2000);
             listenerSocket.Bind(ipepServer);
             listenerSocket.Listen(-1);
-            listViewCommand.Items.Add(new ListViewItem($"Telnet running on {ipLan}:8080"));
+            listViewCommand.Items.Add(new ListViewItem($"Telnet running on {ipLan}:2000"));
             Socket clientSocket = listenerSocket.Accept();
             IPEndPoint remoteEndPoint = (IPEndPoint)clientSocket.RemoteEndPoint;
             listViewCommand.Items.Add(new ListViewItem($"New client connected: {remoteEndPoint.Address}:{remoteEndPoint.Port}"));

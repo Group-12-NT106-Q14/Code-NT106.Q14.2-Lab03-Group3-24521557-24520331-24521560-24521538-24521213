@@ -9,6 +9,9 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
 {
     public partial class Bai03TCPServerForm : Form
     {
+        private TcpListener listener;
+        private Thread listenThread;
+
         public Bai03TCPServerForm()
         {
             InitializeComponent();
@@ -16,39 +19,54 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
 
         private void btnListen_Click(object sender, EventArgs e)
         {
-            CheckForIllegalCrossThreadCalls = false;
-            Thread serverThread = new Thread(ServerThreadFunc);
-            serverThread.IsBackground = true;
-            serverThread.Start();
+            btnListen.Enabled = false;
+            listenThread = new Thread(ListenThreadFunc);
+            listenThread.IsBackground = true;
+            listenThread.Start();
+
+            string localIP = "";
+            var ips = Dns.GetHostEntry(Dns.GetHostName()).AddressList;
+            foreach (var a in ips)
+            {
+                if (a.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    localIP = a.ToString();
+                    break;
+                }
+            }
+            txtLog.AppendText($"Server đang lắng nghe tại địa chỉ {localIP}:3000{Environment.NewLine}");
+            txtLog.AppendText("Server đã khởi động thành công!\r\n");
+            MessageBox.Show("Server đã khởi động thành công!");
         }
 
-        void ServerThreadFunc()
+        private void ListenThreadFunc()
         {
-            TcpListener listener = new TcpListener(IPAddress.Any, 8080);
+            listener = new TcpListener(IPAddress.Any, 3000);
             listener.Start();
-            AddMessage("Server started!");
-            TcpClient client = listener.AcceptTcpClient();
-            IPEndPoint clientEP = (IPEndPoint)client.Client.RemoteEndPoint;
-            AddMessage($"Connection accepted from {clientEP.Address}:{clientEP.Port}");
-
-            NetworkStream ns = client.GetStream();
-            byte[] buffer = new byte[1024];
             while (true)
             {
-                int count = ns.Read(buffer, 0, buffer.Length);
-                if (count == 0) break;
-                string msg = Encoding.UTF8.GetString(buffer, 0, count);
-                if (msg.Trim() == "quit") break;
-                AddMessage($"From client: {msg.Trim()}");
+                TcpClient client = listener.AcceptTcpClient();
+                Thread thr = new Thread(() => ClientProcessing(client));
+                thr.IsBackground = true;
+                thr.Start();
             }
-            ns.Close();
-            client.Close();
-            listener.Stop();
         }
 
-        void AddMessage(string s)
+        private void ClientProcessing(TcpClient client)
         {
-            txtMessages.AppendText(s + Environment.NewLine);
+            try
+            {
+                NetworkStream ns = client.GetStream();
+                byte[] buffer = new byte[1024];
+                int n = ns.Read(buffer, 0, buffer.Length);
+                string msg = Encoding.UTF8.GetString(buffer, 0, n);
+                string resp = $"Server nhận: {msg}";
+                ns.Write(Encoding.UTF8.GetBytes(resp), 0, Encoding.UTF8.GetByteCount(resp));
+                BeginInvoke(new Action(() => txtLog.AppendText($"Client gửi: {msg}\r\n")));
+                ns.Close();
+                client.Close();
+            }
+            catch { }
         }
     }
 }

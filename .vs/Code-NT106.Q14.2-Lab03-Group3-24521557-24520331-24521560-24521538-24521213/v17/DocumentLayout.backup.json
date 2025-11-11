@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|d:\\group-12-nt106.q14\\code-nt106.q14.2-lab03-group3-24521557-24520331-24521560-24521538-24521213\\bai03\\bai03tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|solutionrelative:bai03\\bai03tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|d:\\group-12-nt106.q14\\code-nt106.q14.2-lab03-group3-24521557-24520331-24521560-24521538-24521213\\bai04\\bai04tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|solutionrelative:bai04\\bai04tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|d:\\group-12-nt106.q14\\code-nt106.q14.2-lab03-group3-24521557-24520331-24521560-24521538-24521213\\bai04\\bai04tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|solutionrelative:bai04\\bai04tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|d:\\group-12-nt106.q14\\code-nt106.q14.2-lab03-group3-24521557-24520331-24521560-24521538-24521213\\bai03\\bai03tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E9801E5-55F5-404A-8B25-D60FC2DD7ECF}|Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj|solutionrelative:bai03\\bai03tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +43,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Bai03TCPClient.cs",
-              "DocumentMoniker": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai03\\Bai03TCPClient.cs",
-              "RelativeDocumentMoniker": "Bai03\\Bai03TCPClient.cs",
-              "ToolTip": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai03\\Bai03TCPClient.cs",
-              "RelativeToolTip": "Bai03\\Bai03TCPClient.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAArAAAAAAAAAA==",
+              "Title": "Bai04TCPServer.cs",
+              "DocumentMoniker": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai04\\Bai04TCPServer.cs",
+              "RelativeDocumentMoniker": "Bai04\\Bai04TCPServer.cs",
+              "ToolTip": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai04\\Bai04TCPServer.cs*",
+              "RelativeToolTip": "Bai04\\Bai04TCPServer.cs*",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAmwFAAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:46:08.723Z",
+              "WhenOpened": "2025-11-11T05:03:00.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bai04TCPServer.cs [Design]",
+              "DocumentMoniker": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai04\\Bai04TCPServer.cs",
+              "RelativeDocumentMoniker": "Bai04\\Bai04TCPServer.cs",
+              "ToolTip": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai04\\Bai04TCPServer.cs [Design]*",
+              "RelativeToolTip": "Bai04\\Bai04TCPServer.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T05:02:59.83Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bai03TCPServer.cs",
+              "DocumentMoniker": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai03\\Bai03TCPServer.cs",
+              "RelativeDocumentMoniker": "Bai03\\Bai03TCPServer.cs",
+              "ToolTip": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Bai03\\Bai03TCPServer.cs",
+              "RelativeToolTip": "Bai03\\Bai03TCPServer.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAnwCwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T04:58:48.93Z",
               "EditorCaption": ""
             }
           ]

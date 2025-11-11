@@ -1,64 +1,75 @@
 ﻿using System;
-using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_24521213
 {
     public partial class Bai03TCPClientForm : Form
     {
-        TcpClient client;
-        NetworkStream ns;
+        private TcpClient client;
+        private NetworkStream ns;
 
         public Bai03TCPClientForm()
         {
             InitializeComponent();
+            btnSend.Enabled = false;
+            btnDisconnect.Enabled = false;
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
+            string ip = txtServerIP.Text.Trim();
+            if (string.IsNullOrEmpty(ip)) ip = "127.0.0.1";
             try
             {
                 client = new TcpClient();
-                client.Connect(IPAddress.Parse("127.0.0.1"), 8080);
+                client.Connect(ip, 3000);
                 ns = client.GetStream();
-                btnConnect.Enabled = false;
                 btnSend.Enabled = true;
                 btnDisconnect.Enabled = true;
+                btnConnect.Enabled = false;
+                txtLog.Text += $"[+] Đã kết nối tới server {ip}\r\n";
             }
             catch
             {
-                MessageBox.Show("Cannot connect to server!");
+                MessageBox.Show("Không thể kết nối đến server!");
             }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (ns == null || !client.Connected)
-                return;
-            string msg = txtMessage.Text.Trim();
-            if (string.IsNullOrEmpty(msg)) return;
+            string msg = txtMessage.Text;
+            if (string.IsNullOrEmpty(msg) || ns == null) return;
 
-            byte[] data = Encoding.UTF8.GetBytes(msg + "\n");
-            ns.Write(data, 0, data.Length);
-            txtMessage.Clear();
+            ThreadPool.QueueUserWorkItem(_ =>
+            {
+                try
+                {
+                    byte[] data = Encoding.UTF8.GetBytes(msg);
+                    ns.Write(data, 0, data.Length);
+                    byte[] buff = new byte[1024];
+                    int n = ns.Read(buff, 0, buff.Length);
+                    string response = Encoding.UTF8.GetString(buff, 0, n);
+                    this.Invoke(new Action(() => txtResponse.Text = response));
+                    this.Invoke(new Action(() => txtLog.Text += $"[>] Sent: {msg}\r\n[<] Recv: {response}\r\n"));
+                }
+                catch
+                {
+                    this.Invoke(new Action(() => MessageBox.Show("Mất kết nối tới server!")));
+                }
+            });
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
-            if (ns != null)
-            {
-                byte[] quit = Encoding.UTF8.GetBytes("quit\n");
-                ns.Write(quit, 0, quit.Length);
-                ns.Close();
-            }
-            if (client != null)
-                client.Close();
-
+            try { ns?.Close(); client?.Close(); } catch { }
+            ns = null; client = null;
             btnConnect.Enabled = true;
             btnSend.Enabled = false;
             btnDisconnect.Enabled = false;
+            txtLog.Text += "[x] Đã ngắt kết nối với server\r\n";
         }
     }
 }

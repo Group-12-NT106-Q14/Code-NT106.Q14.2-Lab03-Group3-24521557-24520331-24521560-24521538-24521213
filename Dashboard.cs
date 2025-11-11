@@ -24,5 +24,11 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
             Bai03DashboardForm Bai03 = new Bai03DashboardForm();
             Bai03.Show();
         }
+
+        private void btnBai04_Click(object sender, EventArgs e)
+        {
+            Bai04DashboardForm Bai04 = new Bai04DashboardForm();
+            Bai04.Show();
+        }
     }
 }
