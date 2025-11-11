@@ -118,6 +118,7 @@
             btnBai05.TabIndex = 5;
             btnBai05.Text = "Bài 05";
             btnBai05.UseVisualStyleBackColor = false;
+            btnBai05.Click += btnBai05_Click;
             // 
             // btnBai06
             // 

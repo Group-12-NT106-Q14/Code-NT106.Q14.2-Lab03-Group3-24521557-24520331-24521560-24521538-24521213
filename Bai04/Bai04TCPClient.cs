@@ -121,63 +121,81 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
 
         private void ListenLoop()
         {
-            while (true)
+            try
             {
-                string resp = ReadFullJson(ns);
-                if (resp.StartsWith("SYNC:"))
+                while (true)
                 {
-                    var data = JsonSerializer.Deserialize<Dictionary<string, object>>(resp.Substring(5));
-                    var moviesData = JsonSerializer.Deserialize<Dictionary<string, dynamic>>(data["Movies"].ToString());
-                    var seatsData = JsonSerializer.Deserialize<Dictionary<string, bool>>(data["Seats"].ToString());
-                    this.Invoke((MethodInvoker)delegate {
-                        movies = moviesData; bookedSeats = seatsData;
-                        UpdateMovieComboBox();
-                        if (currentMovie != "" && currentRoom != 0)
-                        {
-                            CreateSeatLayout();
-                            UpdateSelectedSeatsDisplay();
-                        }
-                    });
-                }
-                else if (resp == "OK")
-                {
-                    this.Invoke((MethodInvoker)delegate
+                    string resp = ReadFullJson(ns);
+                    if (resp.StartsWith("SYNC:"))
                     {
-                        MessageBox.Show("Đặt vé thành công!");
-                        string movie = cmbMovie.SelectedItem?.ToString() ?? "";
-                        string customer = txtCustomerName.Text.Trim();
-                        string room = (cmbRoom.SelectedItem != null) ? cmbRoom.SelectedItem.ToString().Split(' ')[1] : "";
-                        string seatList = string.Join(", ", selectedSeats);
-                        decimal price = 0;
-                        if (movies.ContainsKey(movie))
-                            try { price = decimal.Parse(movies[movie].GetProperty("Price").ToString()); } catch { }
-                        decimal totalAmount = 0;
-                        foreach (var seatName in selectedSeats)
+                        var data = JsonSerializer.Deserialize<Dictionary<string, object>>(resp.Substring(5));
+                        var moviesData = JsonSerializer.Deserialize<Dictionary<string, dynamic>>(data["Movies"].ToString());
+                        var seatsData = JsonSerializer.Deserialize<Dictionary<string, bool>>(data["Seats"].ToString());
+                        this.Invoke((MethodInvoker)delegate {
+                            movies = moviesData;
+                            bookedSeats = seatsData;
+                            UpdateMovieComboBox();
+                            if (currentMovie != "" && currentRoom != 0)
+                            {
+                                CreateSeatLayout();
+                                UpdateSelectedSeatsDisplay();
+                            }
+                        });
+                    }
+                    else if (resp == "OK")
+                    {
+                        this.Invoke((MethodInvoker)delegate
                         {
-                            decimal multiplier = 1;
-                            string[] discountSeats = { "A1", "A5", "C1", "C5" };
-                            string[] vipSeats = { "B2", "B3", "B4" };
-                            string[] coupleSeats = { "M1+2", "M3+4", "M5+6", "M7+8", "M9+10", "M11+12" };
-                            if (discountSeats.Contains(seatName)) multiplier = 0.25m;
-                            else if (vipSeats.Contains(seatName) || coupleSeats.Contains(seatName)) multiplier = 2m;
-                            totalAmount += price * multiplier;
-                        }
-                        string result = "";
-                        result += $"Họ và tên: {customer}\r\n";
-                        result += $"Tên phim: {movie}\r\n";
-                        result += $"Phòng chiếu: {room}\r\n";
-                        result += $"Vé đã chọn: {seatList}\r\n";
-                        result += $"Tổng tiền: {totalAmount:N0}đ\r\n";
-                        txtResult.Text = result;
-                        selectedSeats.Clear(); UpdateSelectedSeatsDisplay();
-                    });
-                }
-                else if (resp == "FAILED")
-                {
-                    this.Invoke((MethodInvoker)delegate { MessageBox.Show("Có ghế đã bị đặt mất, vui lòng chọn lại!"); });
+                            MessageBox.Show("Đặt vé thành công!");
+                            string movie = cmbMovie.SelectedItem?.ToString() ?? "";
+                            string customer = txtCustomerName.Text.Trim();
+                            string room = (cmbRoom.SelectedItem != null) ? cmbRoom.SelectedItem.ToString().Split(' ')[1] : "";
+                            string seatList = string.Join(", ", selectedSeats);
+                            decimal price = 0;
+                            if (movies.ContainsKey(movie))
+                                try { price = decimal.Parse(movies[movie].GetProperty("Price").ToString()); } catch { }
+                            decimal totalAmount = 0;
+                            foreach (var seatName in selectedSeats)
+                            {
+                                decimal multiplier = 1;
+                                string[] discountSeats = { "A1", "A5", "C1", "C5" };
+                                string[] vipSeats = { "B2", "B3", "B4" };
+                                string[] coupleSeats = { "M1+2", "M3+4", "M5+6", "M7+8", "M9+10", "M11+12" };
+                                if (discountSeats.Contains(seatName)) multiplier = 0.25m;
+                                else if (vipSeats.Contains(seatName) || coupleSeats.Contains(seatName)) multiplier = 2m;
+                                totalAmount += price * multiplier;
+                            }
+                            string result = "";
+                            result += $"Họ và tên: {customer}\r\n";
+                            result += $"Tên phim: {movie}\r\n";
+                            result += $"Phòng chiếu: {room}\r\n";
+                            result += $"Vé đã chọn: {seatList}\r\n";
+                            result += $"Tổng tiền: {totalAmount:N0}đ\r\n";
+                            txtResult.Text = result;
+                            selectedSeats.Clear(); UpdateSelectedSeatsDisplay();
+                        });
+                    }
+                    else if (resp == "FAILED")
+                    {
+                        this.Invoke((MethodInvoker)delegate { MessageBox.Show("Có ghế đã bị đặt mất, vui lòng chọn lại!"); });
+                    }
                 }
             }
+            catch (IOException)
+            {
+                // Socket đóng (ngắt kết nối) -- không thông báo, thread tự kết thúc yên lặng.
+            }
+            catch (ObjectDisposedException)
+            {
+                // NetworkStream đã bị Dispose, thread tự kết thúc yên lặng.
+            }
+            catch (Exception ex)
+            {
+                // Các lỗi không mong muốn khác mới báo cho người dùng.
+                MessageBox.Show("Lỗi socket: " + ex.Message);
+            }
         }
+
 
         private decimal ComputeTotalAmount()
         {

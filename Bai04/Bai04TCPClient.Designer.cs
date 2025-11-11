@@ -16,140 +16,230 @@
         }
         private void InitializeComponent()
         {
-            btnConnect = new System.Windows.Forms.Button();
-            btnDisconnect = new System.Windows.Forms.Button();
-            btnCalculate = new System.Windows.Forms.Button();
-            btnReset = new System.Windows.Forms.Button();
-            btnExit = new System.Windows.Forms.Button();
-            cmbMovie = new System.Windows.Forms.ComboBox();
-            cmbRoom = new System.Windows.Forms.ComboBox();
-            txtCustomerName = new System.Windows.Forms.TextBox();
-            txtSelectedSeats = new System.Windows.Forms.TextBox();
-            txtTotal = new System.Windows.Forms.TextBox();
-            txtResult = new System.Windows.Forms.TextBox();
-            txtServerIP = new System.Windows.Forms.TextBox();
-            lblCustomerName = new System.Windows.Forms.Label();
-            lblMovie = new System.Windows.Forms.Label();
-            lblRoom = new System.Windows.Forms.Label();
-            lblSelectedSeats = new System.Windows.Forms.Label();
-            lblTotal = new System.Windows.Forms.Label();
-            lblResult = new System.Windows.Forms.Label();
-            lblServerIP = new System.Windows.Forms.Label();
-            panelSeats = new System.Windows.Forms.Panel();
-
+            btnConnect = new Button();
+            btnDisconnect = new Button();
+            btnCalculate = new Button();
+            btnReset = new Button();
+            btnExit = new Button();
+            cmbMovie = new ComboBox();
+            cmbRoom = new ComboBox();
+            txtCustomerName = new TextBox();
+            txtSelectedSeats = new TextBox();
+            txtTotal = new TextBox();
+            txtResult = new TextBox();
+            txtServerIP = new TextBox();
+            lblCustomerName = new Label();
+            lblMovie = new Label();
+            lblRoom = new Label();
+            lblSelectedSeats = new Label();
+            lblTotal = new Label();
+            lblResult = new Label();
+            lblServerIP = new Label();
+            panelSeats = new Panel();
             SuspendLayout();
-
-            btnConnect.Location = new System.Drawing.Point(1240, 20);
-            btnConnect.Size = new System.Drawing.Size(120, 36);
+            // 
+            // btnConnect
+            // 
+            btnConnect.Location = new Point(1240, 20);
+            btnConnect.Name = "btnConnect";
+            btnConnect.Size = new Size(120, 36);
+            btnConnect.TabIndex = 0;
             btnConnect.Text = "Kết nối server";
             btnConnect.Click += btnConnect_Click;
-
-            btnDisconnect.Location = new System.Drawing.Point(1370, 20);
-            btnDisconnect.Size = new System.Drawing.Size(120, 36);
+            // 
+            // btnDisconnect
+            // 
+            btnDisconnect.Location = new Point(1370, 20);
+            btnDisconnect.Name = "btnDisconnect";
+            btnDisconnect.Size = new Size(120, 36);
+            btnDisconnect.TabIndex = 1;
             btnDisconnect.Text = "Ngắt kết nối";
             btnDisconnect.Click += btnDisconnect_Click;
-
-            lblCustomerName.Location = new System.Drawing.Point(25, 30);
-            lblCustomerName.Size = new System.Drawing.Size(110, 25);
-            lblCustomerName.Text = "Họ và tên:";
-
-            txtCustomerName.Location = new System.Drawing.Point(130, 27);
-            txtCustomerName.Size = new System.Drawing.Size(300, 27);
-
-            lblMovie.Location = new System.Drawing.Point(25, 70);
-            lblMovie.Size = new System.Drawing.Size(120, 25);
-            lblMovie.Text = "Chọn phim:";
-
-            cmbMovie.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbMovie.Location = new System.Drawing.Point(130, 67);
-            cmbMovie.Size = new System.Drawing.Size(600, 27);
-            cmbMovie.DropDownWidth = 800;
-            cmbMovie.MaxDropDownItems = 15;
-            cmbMovie.SelectedIndexChanged += cmbMovie_SelectedIndexChanged;
-
-            lblRoom.Location = new System.Drawing.Point(25, 110);
-            lblRoom.Size = new System.Drawing.Size(120, 25);
-            lblRoom.Text = "Phòng chiếu:";
-
-            cmbRoom.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbRoom.Location = new System.Drawing.Point(130, 107);
-            cmbRoom.Size = new System.Drawing.Size(180, 27);
-            cmbRoom.Enabled = false;
-            cmbRoom.SelectedIndexChanged += cmbRoom_SelectedIndexChanged;
-
-            lblSelectedSeats.Location = new System.Drawing.Point(800, 27);
-            lblSelectedSeats.Size = new System.Drawing.Size(120, 25);
-            lblSelectedSeats.Text = "Ghế đã chọn:";
-
-            txtSelectedSeats.Location = new System.Drawing.Point(925, 27);
-            txtSelectedSeats.Size = new System.Drawing.Size(300, 27);
-            txtSelectedSeats.ReadOnly = true;
-
-            lblTotal.Location = new System.Drawing.Point(800, 67);
-            lblTotal.Size = new System.Drawing.Size(120, 25);
-            lblTotal.Text = "Tiền tạm tính:";
-
-            txtTotal.Location = new System.Drawing.Point(925, 67);
-            txtTotal.Size = new System.Drawing.Size(300, 27);
-            txtTotal.ReadOnly = true;
-
-            lblServerIP.Location = new System.Drawing.Point(800, 107);
-            lblServerIP.Size = new System.Drawing.Size(70, 25);
-            lblServerIP.Text = "IP server:";
-            txtServerIP.Location = new System.Drawing.Point(870, 107);
-            txtServerIP.Size = new System.Drawing.Size(160, 27);
-            txtServerIP.Text = "127.0.0.1";
-
-            btnCalculate.Location = new System.Drawing.Point(1240, 70);
-            btnCalculate.Size = new System.Drawing.Size(120, 36);
+            // 
+            // btnCalculate
+            // 
+            btnCalculate.Location = new Point(1240, 70);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(120, 36);
+            btnCalculate.TabIndex = 15;
             btnCalculate.Text = "Đặt vé";
             btnCalculate.Click += btnCalculate_Click;
-
-            btnReset.Location = new System.Drawing.Point(1370, 70);
-            btnReset.Size = new System.Drawing.Size(120, 36);
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(1370, 70);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(120, 36);
+            btnReset.TabIndex = 16;
             btnReset.Text = "Làm mới";
             btnReset.Click += btnReset_Click;
-
-            panelSeats.Location = new System.Drawing.Point(25, 150);
-            panelSeats.Size = new System.Drawing.Size(1080, 600);
-            panelSeats.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panelSeats.Visible = false;
-
-            lblResult.Location = new System.Drawing.Point(1240, 150);
-            lblResult.Size = new System.Drawing.Size(110, 25);
-            lblResult.Text = "Thông tin vé:";
-
-            txtResult.Location = new System.Drawing.Point(1240, 180);
-            txtResult.Size = new System.Drawing.Size(250, 230);
-            txtResult.Multiline = true;
-            txtResult.ReadOnly = true;
-            txtResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-
-            btnExit.Location = new System.Drawing.Point(1240, 420);
-            btnExit.Size = new System.Drawing.Size(250, 35);
+            // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(1240, 420);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(250, 35);
+            btnExit.TabIndex = 19;
             btnExit.Text = "Thoát";
             btnExit.Click += btnExit_Click;
-
-            this.ClientSize = new System.Drawing.Size(1550, 800);
-
-            this.Controls.Add(btnConnect); this.Controls.Add(btnDisconnect);
-            this.Controls.Add(lblCustomerName); this.Controls.Add(txtCustomerName);
-            this.Controls.Add(lblMovie); this.Controls.Add(cmbMovie);
-            this.Controls.Add(lblRoom); this.Controls.Add(cmbRoom);
-            this.Controls.Add(lblSelectedSeats); this.Controls.Add(txtSelectedSeats);
-            this.Controls.Add(lblTotal); this.Controls.Add(txtTotal);
-            this.Controls.Add(lblServerIP); this.Controls.Add(txtServerIP);
-            this.Controls.Add(panelSeats);
-            this.Controls.Add(btnCalculate); this.Controls.Add(btnReset);
-            this.Controls.Add(lblResult); this.Controls.Add(txtResult);
-            this.Controls.Add(btnExit);
-
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Client - Đặt vé phòng vé";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            // cmbMovie
+            // 
+            cmbMovie.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMovie.DropDownWidth = 800;
+            cmbMovie.Location = new Point(130, 67);
+            cmbMovie.MaxDropDownItems = 15;
+            cmbMovie.Name = "cmbMovie";
+            cmbMovie.Size = new Size(600, 28);
+            cmbMovie.TabIndex = 5;
+            cmbMovie.SelectedIndexChanged += cmbMovie_SelectedIndexChanged;
+            // 
+            // cmbRoom
+            // 
+            cmbRoom.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRoom.Enabled = false;
+            cmbRoom.Location = new Point(130, 107);
+            cmbRoom.Name = "cmbRoom";
+            cmbRoom.Size = new Size(180, 28);
+            cmbRoom.TabIndex = 7;
+            cmbRoom.SelectedIndexChanged += cmbRoom_SelectedIndexChanged;
+            // 
+            // txtCustomerName
+            // 
+            txtCustomerName.Location = new Point(130, 27);
+            txtCustomerName.Name = "txtCustomerName";
+            txtCustomerName.Size = new Size(300, 27);
+            txtCustomerName.TabIndex = 3;
+            // 
+            // txtSelectedSeats
+            // 
+            txtSelectedSeats.Location = new Point(925, 27);
+            txtSelectedSeats.Name = "txtSelectedSeats";
+            txtSelectedSeats.ReadOnly = true;
+            txtSelectedSeats.Size = new Size(300, 27);
+            txtSelectedSeats.TabIndex = 9;
+            // 
+            // txtTotal
+            // 
+            txtTotal.Location = new Point(925, 67);
+            txtTotal.Name = "txtTotal";
+            txtTotal.ReadOnly = true;
+            txtTotal.Size = new Size(300, 27);
+            txtTotal.TabIndex = 11;
+            // 
+            // txtResult
+            // 
+            txtResult.Location = new Point(1240, 180);
+            txtResult.Multiline = true;
+            txtResult.Name = "txtResult";
+            txtResult.ReadOnly = true;
+            txtResult.ScrollBars = ScrollBars.Vertical;
+            txtResult.Size = new Size(250, 230);
+            txtResult.TabIndex = 18;
+            // 
+            // txtServerIP
+            // 
+            txtServerIP.Location = new Point(870, 107);
+            txtServerIP.Name = "txtServerIP";
+            txtServerIP.Size = new Size(160, 27);
+            txtServerIP.TabIndex = 13;
+            txtServerIP.Text = "127.0.0.1";
+            // 
+            // lblCustomerName
+            // 
+            lblCustomerName.Location = new Point(25, 30);
+            lblCustomerName.Name = "lblCustomerName";
+            lblCustomerName.Size = new Size(99, 25);
+            lblCustomerName.TabIndex = 2;
+            lblCustomerName.Text = "Họ và tên:";
+            // 
+            // lblMovie
+            // 
+            lblMovie.Location = new Point(25, 70);
+            lblMovie.Name = "lblMovie";
+            lblMovie.Size = new Size(99, 25);
+            lblMovie.TabIndex = 4;
+            lblMovie.Text = "Chọn phim:";
+            // 
+            // lblRoom
+            // 
+            lblRoom.Location = new Point(25, 110);
+            lblRoom.Name = "lblRoom";
+            lblRoom.Size = new Size(99, 25);
+            lblRoom.TabIndex = 6;
+            lblRoom.Text = "Phòng chiếu:";
+            // 
+            // lblSelectedSeats
+            // 
+            lblSelectedSeats.Location = new Point(800, 27);
+            lblSelectedSeats.Name = "lblSelectedSeats";
+            lblSelectedSeats.Size = new Size(120, 25);
+            lblSelectedSeats.TabIndex = 8;
+            lblSelectedSeats.Text = "Ghế đã chọn:";
+            // 
+            // lblTotal
+            // 
+            lblTotal.Location = new Point(800, 67);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(120, 25);
+            lblTotal.TabIndex = 10;
+            lblTotal.Text = "Tiền tạm tính:";
+            // 
+            // lblResult
+            // 
+            lblResult.Location = new Point(1240, 150);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(110, 25);
+            lblResult.TabIndex = 17;
+            lblResult.Text = "Thông tin vé:";
+            // 
+            // lblServerIP
+            // 
+            lblServerIP.Location = new Point(800, 107);
+            lblServerIP.Name = "lblServerIP";
+            lblServerIP.Size = new Size(70, 25);
+            lblServerIP.TabIndex = 12;
+            lblServerIP.Text = "IP server:";
+            // 
+            // panelSeats
+            // 
+            panelSeats.BorderStyle = BorderStyle.FixedSingle;
+            panelSeats.Location = new Point(25, 150);
+            panelSeats.Name = "panelSeats";
+            panelSeats.Size = new Size(1080, 600);
+            panelSeats.TabIndex = 14;
+            panelSeats.Visible = false;
+            // 
+            // Bai04TCPClientForm
+            // 
+            ClientSize = new Size(1550, 800);
+            Controls.Add(btnConnect);
+            Controls.Add(btnDisconnect);
+            Controls.Add(lblCustomerName);
+            Controls.Add(txtCustomerName);
+            Controls.Add(lblMovie);
+            Controls.Add(cmbMovie);
+            Controls.Add(lblRoom);
+            Controls.Add(cmbRoom);
+            Controls.Add(lblSelectedSeats);
+            Controls.Add(txtSelectedSeats);
+            Controls.Add(lblTotal);
+            Controls.Add(txtTotal);
+            Controls.Add(lblServerIP);
+            Controls.Add(txtServerIP);
+            Controls.Add(panelSeats);
+            Controls.Add(btnCalculate);
+            Controls.Add(btnReset);
+            Controls.Add(lblResult);
+            Controls.Add(txtResult);
+            Controls.Add(btnExit);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Bai04TCPClientForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Client - Đặt vé phòng vé";
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }

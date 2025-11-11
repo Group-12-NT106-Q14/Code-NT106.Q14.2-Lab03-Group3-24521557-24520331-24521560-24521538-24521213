@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1PISr3lnpo8=",
+  "dgSpecHash": "MPWQaHxdj6U=",
   "success": true,
   "projectFilePath": "D:\\Group-12-NT106.Q14\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213\\Code-NT106.Q14.2-Lab03-Group3-24521557-24520331-24521560-24521538-24521213.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Shiba\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
+    "C:\\Users\\Shiba\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512"
+  ],
   "logs": []
 }

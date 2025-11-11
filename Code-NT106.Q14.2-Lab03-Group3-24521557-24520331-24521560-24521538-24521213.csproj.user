@@ -31,6 +31,15 @@
     <Compile Update="Bai04\Bai04TCPServer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Bai05\Bai05Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai05\Bai05TCPClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai05\Bai05TCPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

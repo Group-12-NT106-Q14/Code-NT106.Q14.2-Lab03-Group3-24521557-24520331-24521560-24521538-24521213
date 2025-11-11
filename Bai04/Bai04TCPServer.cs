@@ -61,7 +61,7 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
 
         private void btnExportReport_Click(object sender, EventArgs e)
         {
-            ExportReportAsync("output_bai4.txt");
+            ExportReportAsync("baocao.txt");
         }
 
         private void btnStartServer_Click(object sender, EventArgs e)

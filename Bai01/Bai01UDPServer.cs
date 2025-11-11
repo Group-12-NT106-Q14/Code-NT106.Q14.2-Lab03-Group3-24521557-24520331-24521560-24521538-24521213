@@ -88,28 +88,32 @@ namespace Code_NT106.Q14._2_Lab03_Group3_24521557_24520331_24521560_24521538_245
                     string message = Encoding.UTF8.GetString(receivedBytes);
                     string display = $"{remoteEndPoint.Address}:{remoteEndPoint.Port} - {message}";
                     if (lstMessages.InvokeRequired)
-                    {
                         lstMessages.Invoke(new Action<string>(AddMessage), display);
-                    }
                     else
-                    {
                         AddMessage(display);
-                    }
                 }
-                catch (Exception ex) when (isListening)
+                catch (SocketException ex)
                 {
-                    string error = $"Lỗi nhận: {ex.Message}";
+                    if (!isListening && ex.SocketErrorCode == SocketError.Interrupted)
+                        break; 
                     if (lstMessages.InvokeRequired)
-                    {
-                        lstMessages.Invoke(new Action<string>(AddMessage), error);
-                    }
+                        lstMessages.Invoke(new Action<string>(AddMessage), $"Lỗi nhận: {ex.Message}");
                     else
+                        AddMessage($"Lỗi nhận: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    if (isListening)
                     {
-                        AddMessage(error);
+                        if (lstMessages.InvokeRequired)
+                            lstMessages.Invoke(new Action<string>(AddMessage), $"Lỗi nhận: {ex.Message}");
+                        else
+                            AddMessage($"Lỗi nhận: {ex.Message}");
                     }
                 }
             }
         }
+
 
         private void AddMessage(string message)
         {
