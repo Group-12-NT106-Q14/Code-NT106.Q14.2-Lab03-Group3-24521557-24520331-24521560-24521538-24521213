@@ -132,6 +132,7 @@
             btnBai06.TabIndex = 6;
             btnBai06.Text = "Bài 06";
             btnBai06.UseVisualStyleBackColor = false;
+            btnBai06.Click += btnBai06_Click;
             // 
             // label1
             // 

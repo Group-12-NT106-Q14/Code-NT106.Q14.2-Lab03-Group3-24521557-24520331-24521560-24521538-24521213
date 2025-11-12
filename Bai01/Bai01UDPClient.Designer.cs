@@ -12,106 +12,115 @@
 
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblRemoteIp = new System.Windows.Forms.Label();
-            this.txtRemoteIp = new System.Windows.Forms.TextBox();
-            this.lblPort = new System.Windows.Forms.Label();
-            this.txtPort = new System.Windows.Forms.TextBox();
-            this.lblMessage = new System.Windows.Forms.Label();
-            this.txtMessage = new System.Windows.Forms.TextBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-
+            lblTitle = new Label();
+            lblRemoteIp = new Label();
+            txtRemoteIp = new TextBox();
+            lblPort = new Label();
+            txtPort = new TextBox();
+            lblMessage = new Label();
+            txtMessage = new TextBox();
+            btnSend = new Button();
+            SuspendLayout();
+            // 
             // lblTitle
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(170, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(163, 32);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "UDP Client";
-
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Arial", 16F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.Navy;
+            lblTitle.Location = new Point(170, 20);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(157, 32);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "UDP Client";
+            // 
             // lblRemoteIp
-            this.lblRemoteIp.AutoSize = true;
-            this.lblRemoteIp.Font = new System.Drawing.Font("Arial", 11F);
-            this.lblRemoteIp.Location = new System.Drawing.Point(30, 70);
-            this.lblRemoteIp.Name = "lblRemoteIp";
-            this.lblRemoteIp.Size = new System.Drawing.Size(95, 22);
-            this.lblRemoteIp.TabIndex = 1;
-            this.lblRemoteIp.Text = "IP Server:";
-
+            // 
+            lblRemoteIp.AutoSize = true;
+            lblRemoteIp.Font = new Font("Arial", 11F);
+            lblRemoteIp.Location = new Point(30, 70);
+            lblRemoteIp.Name = "lblRemoteIp";
+            lblRemoteIp.Size = new Size(95, 22);
+            lblRemoteIp.TabIndex = 1;
+            lblRemoteIp.Text = "IP Server:";
+            // 
             // txtRemoteIp
-            this.txtRemoteIp.Font = new System.Drawing.Font("Arial", 11F);
-            this.txtRemoteIp.Location = new System.Drawing.Point(130, 66);
-            this.txtRemoteIp.Name = "txtRemoteIp";
-            this.txtRemoteIp.Size = new System.Drawing.Size(260, 28);
-            this.txtRemoteIp.TabIndex = 2;
-
+            // 
+            txtRemoteIp.Font = new Font("Arial", 11F);
+            txtRemoteIp.Location = new Point(130, 66);
+            txtRemoteIp.Name = "txtRemoteIp";
+            txtRemoteIp.Size = new Size(260, 29);
+            txtRemoteIp.TabIndex = 2;
+            // 
             // lblPort
-            this.lblPort.AutoSize = true;
-            this.lblPort.Font = new System.Drawing.Font("Arial", 11F);
-            this.lblPort.Location = new System.Drawing.Point(30, 115);
-            this.lblPort.Name = "lblPort";
-            this.lblPort.Size = new System.Drawing.Size(45, 22);
-            this.lblPort.TabIndex = 3;
-            this.lblPort.Text = "Port:";
-
+            // 
+            lblPort.AutoSize = true;
+            lblPort.Font = new Font("Arial", 11F);
+            lblPort.Location = new Point(30, 115);
+            lblPort.Name = "lblPort";
+            lblPort.Size = new Size(50, 22);
+            lblPort.TabIndex = 3;
+            lblPort.Text = "Port:";
+            // 
             // txtPort
-            this.txtPort.Font = new System.Drawing.Font("Arial", 11F);
-            this.txtPort.Location = new System.Drawing.Point(130, 111);
-            this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(100, 28);
-            this.txtPort.TabIndex = 4;
-
+            // 
+            txtPort.Font = new Font("Arial", 11F);
+            txtPort.Location = new Point(130, 111);
+            txtPort.Name = "txtPort";
+            txtPort.Size = new Size(100, 29);
+            txtPort.TabIndex = 4;
+            // 
             // lblMessage
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Font = new System.Drawing.Font("Arial", 11F);
-            this.lblMessage.Location = new System.Drawing.Point(30, 160);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(90, 22);
-            this.lblMessage.TabIndex = 5;
-            this.lblMessage.Text = "Message:";
-
+            // 
+            lblMessage.AutoSize = true;
+            lblMessage.Font = new Font("Arial", 11F);
+            lblMessage.Location = new Point(30, 160);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(93, 22);
+            lblMessage.TabIndex = 5;
+            lblMessage.Text = "Message:";
+            // 
             // txtMessage
-            this.txtMessage.Font = new System.Drawing.Font("Consolas", 12F);
-            this.txtMessage.Location = new System.Drawing.Point(33, 190);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMessage.Size = new System.Drawing.Size(400, 170);
-            this.txtMessage.TabIndex = 6;
-
+            // 
+            txtMessage.Font = new Font("Consolas", 12F);
+            txtMessage.Location = new Point(33, 190);
+            txtMessage.Multiline = true;
+            txtMessage.Name = "txtMessage";
+            txtMessage.ScrollBars = ScrollBars.Vertical;
+            txtMessage.Size = new Size(400, 170);
+            txtMessage.TabIndex = 6;
+            // 
             // btnSend
-            this.btnSend.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSend.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSend.ForeColor = System.Drawing.Color.White;
-            this.btnSend.Location = new System.Drawing.Point(33, 380);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(400, 42);
-            this.btnSend.TabIndex = 7;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = false;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-
+            // 
+            btnSend.BackColor = Color.LightBlue;
+            btnSend.Font = new Font("Arial", 12F, FontStyle.Bold);
+            btnSend.ForeColor = Color.White;
+            btnSend.Location = new Point(33, 380);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(400, 42);
+            btnSend.TabIndex = 7;
+            btnSend.Text = "Send";
+            btnSend.UseVisualStyleBackColor = false;
+            btnSend.Click += btnSend_Click;
+            // 
             // Bai01UDPClientForm
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(470, 450);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.lblRemoteIp);
-            this.Controls.Add(this.txtRemoteIp);
-            this.Controls.Add(this.lblPort);
-            this.Controls.Add(this.txtPort);
-            this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.btnSend);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "Bai01UDPClientForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UDP Client";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            BackColor = Color.WhiteSmoke;
+            ClientSize = new Size(470, 450);
+            Controls.Add(lblTitle);
+            Controls.Add(lblRemoteIp);
+            Controls.Add(txtRemoteIp);
+            Controls.Add(lblPort);
+            Controls.Add(txtPort);
+            Controls.Add(lblMessage);
+            Controls.Add(txtMessage);
+            Controls.Add(btnSend);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Bai01UDPClientForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bài 01 - UDP Client";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Label lblTitle;

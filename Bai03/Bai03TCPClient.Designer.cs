@@ -131,7 +131,7 @@
             MaximizeBox = false;
             Name = "Bai03TCPClientForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "TCP Client Bài 3";
+            Text = "Bài 03 - TCP Client ";
             ResumeLayout(false);
             PerformLayout();
         }

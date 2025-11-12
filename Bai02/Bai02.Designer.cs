@@ -12,42 +12,46 @@
 
         private void InitializeComponent()
         {
-            this.btnListen = new System.Windows.Forms.Button();
-            this.listViewCommand = new System.Windows.Forms.ListView();
-            this.SuspendLayout();
+            btnListen = new Button();
+            listViewCommand = new ListView();
+            SuspendLayout();
             // 
             // btnListen
             // 
-            this.btnListen.Location = new System.Drawing.Point(520, 20);
-            this.btnListen.Name = "btnListen";
-            this.btnListen.Size = new System.Drawing.Size(110, 40);
-            this.btnListen.TabIndex = 0;
-            this.btnListen.Text = "Listen";
-            this.btnListen.UseVisualStyleBackColor = true;
-            this.btnListen.Click += new System.EventHandler(this.StartListen);
+            btnListen.Location = new Point(416, 16);
+            btnListen.Margin = new Padding(2, 2, 2, 2);
+            btnListen.Name = "btnListen";
+            btnListen.Size = new Size(88, 32);
+            btnListen.TabIndex = 0;
+            btnListen.Text = "Listen";
+            btnListen.UseVisualStyleBackColor = true;
+            btnListen.Click += StartListen;
             // 
             // listViewCommand
             // 
-            this.listViewCommand.Font = new System.Drawing.Font("Consolas", 12F);
-            this.listViewCommand.Location = new System.Drawing.Point(20, 70);
-            this.listViewCommand.Name = "listViewCommand";
-            this.listViewCommand.Size = new System.Drawing.Size(610, 380);
-            this.listViewCommand.TabIndex = 1;
-            this.listViewCommand.View = System.Windows.Forms.View.List;
+            listViewCommand.Font = new Font("Consolas", 12F);
+            listViewCommand.Location = new Point(16, 56);
+            listViewCommand.Margin = new Padding(2, 2, 2, 2);
+            listViewCommand.Name = "listViewCommand";
+            listViewCommand.Size = new Size(489, 305);
+            listViewCommand.TabIndex = 1;
+            listViewCommand.UseCompatibleStateImageBehavior = false;
+            listViewCommand.View = View.List;
             // 
             // Bai02Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 470);
-            this.Controls.Add(this.listViewCommand);
-            this.Controls.Add(this.btnListen);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "Bai02Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lab03_Bai02 - TCP Telnet Server";
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(520, 376);
+            Controls.Add(listViewCommand);
+            Controls.Add(btnListen);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(2, 2, 2, 2);
+            MaximizeBox = false;
+            Name = "Bai02Form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bài 02 - TCP Telnet Server";
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.Button btnListen;

@@ -51,7 +51,7 @@
             MaximizeBox = false;
             Name = "Bai01DashboardForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Bài 01 - UDP";
+            Text = "Bài 01 - Dashboard";
             ResumeLayout(false);
         }
         private System.Windows.Forms.Button btnUDPServer;

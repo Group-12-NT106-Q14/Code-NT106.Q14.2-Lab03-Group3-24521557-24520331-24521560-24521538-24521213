@@ -313,7 +313,7 @@
             MaximizeBox = false;
             Name = "Bai05TCPClient";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Bai05TCPClient - Hôm nay ăn gì (client)";
+            Text = "Bài 05 - TCP Client";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

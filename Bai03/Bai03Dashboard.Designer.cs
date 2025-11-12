@@ -13,31 +13,39 @@
 
         private void InitializeComponent()
         {
-            this.btnOpenServer = new Button();
-            this.btnOpenClient = new Button();
-            this.SuspendLayout();
-
+            btnOpenServer = new Button();
+            btnOpenClient = new Button();
+            SuspendLayout();
+            // 
             // btnOpenServer
-            this.btnOpenServer.Location = new System.Drawing.Point(30, 32);
-            this.btnOpenServer.Size = new System.Drawing.Size(320, 40);
-            this.btnOpenServer.Text = "Open TCP Server";
-            this.btnOpenServer.Click += new System.EventHandler(this.btnOpenServer_Click);
-
+            // 
+            btnOpenServer.Location = new Point(30, 32);
+            btnOpenServer.Name = "btnOpenServer";
+            btnOpenServer.Size = new Size(320, 40);
+            btnOpenServer.TabIndex = 0;
+            btnOpenServer.Text = "Open TCP Server";
+            btnOpenServer.Click += btnOpenServer_Click;
+            // 
             // btnOpenClient
-            this.btnOpenClient.Location = new System.Drawing.Point(30, 90);
-            this.btnOpenClient.Size = new System.Drawing.Size(320, 40);
-            this.btnOpenClient.Text = "Open new TCP client";
-            this.btnOpenClient.Click += new System.EventHandler(this.btnOpenClient_Click);
-
-            // Form
-            this.ClientSize = new System.Drawing.Size(380, 170);
-            this.Controls.Add(this.btnOpenServer);
-            this.Controls.Add(this.btnOpenClient);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lab03_Bai03";
-            this.ResumeLayout(false);
+            // 
+            btnOpenClient.Location = new Point(30, 90);
+            btnOpenClient.Name = "btnOpenClient";
+            btnOpenClient.Size = new Size(320, 40);
+            btnOpenClient.TabIndex = 1;
+            btnOpenClient.Text = "Open new TCP client";
+            btnOpenClient.Click += btnOpenClient_Click;
+            // 
+            // Bai03DashboardForm
+            // 
+            ClientSize = new Size(380, 170);
+            Controls.Add(btnOpenServer);
+            Controls.Add(btnOpenClient);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Bai03DashboardForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bài 03 - Dashboard";
+            ResumeLayout(false);
         }
     }
 }

@@ -237,7 +237,7 @@
             MaximizeBox = false;
             Name = "Bai04TCPClientForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Client - Đặt vé phòng vé";
+            Text = "Bài 04 - TCP Client";
             ResumeLayout(false);
             PerformLayout();
         }

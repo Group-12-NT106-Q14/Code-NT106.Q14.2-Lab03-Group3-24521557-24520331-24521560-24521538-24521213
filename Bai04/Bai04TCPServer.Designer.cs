@@ -13,44 +13,64 @@
         }
         private void InitializeComponent()
         {
-            btnLoadFile = new System.Windows.Forms.Button();
-            btnExportReport = new System.Windows.Forms.Button();
-            btnStartServer = new System.Windows.Forms.Button();
-            txtLog = new System.Windows.Forms.TextBox();
+            btnLoadFile = new Button();
+            btnExportReport = new Button();
+            btnStartServer = new Button();
+            txtLog = new TextBox();
             SuspendLayout();
-            btnLoadFile.Location = new System.Drawing.Point(16, 18);
-            btnLoadFile.Size = new System.Drawing.Size(120, 36);
+            // 
+            // btnLoadFile
+            // 
+            btnLoadFile.Location = new Point(16, 18);
+            btnLoadFile.Name = "btnLoadFile";
+            btnLoadFile.Size = new Size(120, 36);
+            btnLoadFile.TabIndex = 0;
             btnLoadFile.Text = "Đọc file phim";
             btnLoadFile.Click += btnLoadFile_Click;
-
-            btnExportReport.Location = new System.Drawing.Point(146, 18);
-            btnExportReport.Size = new System.Drawing.Size(140, 36);
+            // 
+            // btnExportReport
+            // 
+            btnExportReport.Location = new Point(146, 18);
+            btnExportReport.Name = "btnExportReport";
+            btnExportReport.Size = new Size(140, 36);
+            btnExportReport.TabIndex = 1;
             btnExportReport.Text = "Xuất báo cáo";
             btnExportReport.Click += btnExportReport_Click;
-
-            btnStartServer.Location = new System.Drawing.Point(300, 18);
-            btnStartServer.Size = new System.Drawing.Size(140, 36);
+            // 
+            // btnStartServer
+            // 
+            btnStartServer.Enabled = false;
+            btnStartServer.Location = new Point(300, 18);
+            btnStartServer.Name = "btnStartServer";
+            btnStartServer.Size = new Size(140, 36);
+            btnStartServer.TabIndex = 2;
             btnStartServer.Text = "Start Server";
             btnStartServer.Click += btnStartServer_Click;
-            btnStartServer.Enabled = false;
-
-            txtLog.Location = new System.Drawing.Point(16, 68);
-            txtLog.Size = new System.Drawing.Size(424, 280);
+            // 
+            // txtLog
+            // 
+            txtLog.Location = new Point(16, 68);
             txtLog.Multiline = true;
-            txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            txtLog.Name = "txtLog";
             txtLog.ReadOnly = true;
-
-            this.ClientSize = new System.Drawing.Size(460, 370);
-            this.Controls.Add(btnLoadFile);
-            this.Controls.Add(btnExportReport);
-            this.Controls.Add(btnStartServer);
-            this.Controls.Add(txtLog);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Server - Quản lý phòng vé";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            txtLog.ScrollBars = ScrollBars.Vertical;
+            txtLog.Size = new Size(424, 280);
+            txtLog.TabIndex = 3;
+            // 
+            // Bai04TCPServerForm
+            // 
+            ClientSize = new Size(460, 370);
+            Controls.Add(btnLoadFile);
+            Controls.Add(btnExportReport);
+            Controls.Add(btnStartServer);
+            Controls.Add(txtLog);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Bai04TCPServerForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bài 04 - TCP Server";
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }

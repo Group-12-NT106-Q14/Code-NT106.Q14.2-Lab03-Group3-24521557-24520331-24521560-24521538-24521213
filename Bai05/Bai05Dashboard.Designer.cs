@@ -7,43 +7,43 @@
         private System.Windows.Forms.Button btnClient;
         private void InitializeComponent()
         {
-            this.btnServer = new System.Windows.Forms.Button();
-            this.btnClient = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnServer = new Button();
+            btnClient = new Button();
+            SuspendLayout();
             // 
             // btnServer
             // 
-            this.btnServer.Location = new System.Drawing.Point(18, 18);
-            this.btnServer.Name = "btnServer";
-            this.btnServer.Size = new System.Drawing.Size(324, 46);
-            this.btnServer.TabIndex = 0;
-            this.btnServer.Text = "Open TCP Server";
-            this.btnServer.UseVisualStyleBackColor = true;
-            this.btnServer.Click += new System.EventHandler(this.btnServer_Click);
+            btnServer.Location = new Point(16, 18);
+            btnServer.Name = "btnServer";
+            btnServer.Size = new Size(288, 46);
+            btnServer.TabIndex = 0;
+            btnServer.Text = "Open TCP Server";
+            btnServer.UseVisualStyleBackColor = true;
+            btnServer.Click += btnServer_Click;
             // 
             // btnClient
             // 
-            this.btnClient.Location = new System.Drawing.Point(18, 74);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(324, 46);
-            this.btnClient.TabIndex = 1;
-            this.btnClient.Text = "Open new TCP Client";
-            this.btnClient.UseVisualStyleBackColor = true;
-            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
+            btnClient.Location = new Point(16, 74);
+            btnClient.Name = "btnClient";
+            btnClient.Size = new Size(288, 46);
+            btnClient.TabIndex = 1;
+            btnClient.Text = "Open new TCP Client";
+            btnClient.UseVisualStyleBackColor = true;
+            btnClient.Click += btnClient_Click;
             // 
             // Bai05Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 140);
-            this.Controls.Add(this.btnClient);
-            this.Controls.Add(this.btnServer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.Name = "Bai05Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(320, 140);
+            Controls.Add(btnClient);
+            Controls.Add(btnServer);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            Name = "Bai05Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bài 05 - Dashboard";
+            ResumeLayout(false);
         }
     }
 }
